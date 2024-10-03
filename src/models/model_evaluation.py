@@ -88,7 +88,7 @@ def main():
     try:
         clf = load_model('./models/model.pkl')
         # Make sure to load the correct test dataset here based on your DVC output
-        test_data = load_data('./data/processed/test_bow.csv')  # Ensure this path matches your workflow
+        test_data = load_data('./data/processed/test_tfidf.csv')  # Ensure this path matches your workflow
         
         X_test = test_data.iloc[:, :-1].values
         y_test = test_data.iloc[:, -1].values
